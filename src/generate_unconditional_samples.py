@@ -11,7 +11,7 @@ import model, sample, encoder  # 导入项目内的模块：模型定义、采�
 def sample_model(
     model_name='124M',     # 指定要使用的预训练模型名称（如 124M, 355M, 774M, 1558M）
     seed=None,             # 设置随机数种子，如果为了复现结果可以固定此值
-    nsamples=0,            # 总共生成的样本数量。如果设为 0，则无限循环生成，直到手动停止
+    nsamples=3,            # 总共生成的样本数量。如果设为 0，则无限循环生成，直到手动停止
     batch_size=1,          # 批大小，即一次并行生成多少个样本（受显存/内存限制）
     length=None,           # 每个样本生成的文本长度（Token 数）。None 表示使用模型最大允许长度
     temperature=1,         # 采样温度。值越低分布越尖锐（更确定），值越高分布越平坦（更随机）
